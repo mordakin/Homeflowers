@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Солнечные растения</title>
+  <link rel="stylesheet" href="2.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Курсач</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#overview')" title="Растения">Растения</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Интересное">Интересное</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Солнечные растения</h1>
+    <h3>и уход за ними</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши советы помогут вам!</h2>
+      <span>Уход за солнечными растениями</span>
+    </div>
+    <div class="text">
+      <span>У данных растений есть некоторые проблемы, например перегрев корней в горшке. Обычно, проблему составляет температура, до которой под ними нагревается горшок. Выходом могут стать керамические светоотражающие кашпо, которые не дают горшку с корнями перегреваться. Подбирая кашпо имейте в виду, что очень желательно чтобы зазор между стенками и кашпо составлял около сантиметра: это обеспечит воздушную прослойку, дополнительно защищающую от перегрева.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Примеры таких растенеий</h2>
+    <h4></h4>
+
+    <div class="img">
+      <img src="12.jpg" alt="">
+      <span>Адениум</span>
+    </div>
+      <div class="img">
+      <img src="22.jpg" alt="">
+      <span>Гибискус</span>
+    </div>
+      <div class="img">
+      <img src="32.jpg" alt="">
+      <span>Бугенвиллия </span>
+    </div>
+      <div class="img">
+      <img src="42.jpg" alt="">
+      <span>Гиппеаструм </span>
+    </div>
+  </div>
+    <div id="faq">
+    <div>
+      <span class="title">Интересный факт</span><br>
+      <p>Самыми старыми растениями на сегодняшний день являются лишайники Антарктиды.</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <p>Сайт создан студентом ИКБО-02-20 Чумиковым Дмитрием.</p>
+    </div>
+    <div>
+      <span class="title">Кто мы и откуда?</span><br>
+    </div>
+  </div>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>

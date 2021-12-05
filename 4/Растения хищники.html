@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Хищные растения</title>
+  <link rel="stylesheet" href="4.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Курсач</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#overview')" title="Растения">Растения</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Интересное">Интересное</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Хищные растения</h1>
+    <h3>и уход за ними</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши советы помогут вам!</h2>
+      <span>Уход за хищными растениями</span>
+    </div>
+    <div class="text">
+      <span>Все "хищники" светолюбивы и любят хорошо проветриваемые помещения.
+Для всех необходима высокая влажность воздуха – 80-90%. При этом не следует опрыскивать растения и тем более мыть их под душем.
+Температурный режим: летом - 22-26ºС, зимой - не менее 10ºС.
+Поливать растения-хищники следует теплой, отстоянной, мягкой, слегка подкисленной водой. Желательно – дождевой или талой, добавив в нее немного уксусной кислоты. Режим полива также важен: летом почва должна быть влажной постоянно, а вот зимой полив сокращают до 1 раза в 2 недели.
+Чтобы корни не гнили в горшке, необходим хороший дренаж: слой 1-2 см керамзита или битой керамической крошки. Всем хищным растениям, за исключением непентеса, нужна кислая почва, лучше всего торф.
+В сезон активного роста с - марта по сентябрь - хищные растения можно раз в месяц подкармливать жидкими минеральными удобрениями (для суккулентов или азалий), разбавив питательный раствор в 2 раза.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Примеры таких растенеий</h2>
+    <h4></h4>
+
+    <div class="img">
+      <img src="14.jpg" alt="">
+      <span>Дионея</span>
+    </div>
+      <div class="img">
+      <img src="24.jpg" alt="">
+      <span>Непентес</span>
+    </div>
+      <div class="img">
+      <img src="34..jpg" alt="">
+      <span>Росянка </span>
+    </div>
+      <div class="img">
+      <img src="44.jpg" alt="">
+      <span>Саррацения </span>
+    </div>
+  </div>
+    <div id="faq">
+    <div>
+      <span class="title">Интересный факт</span><br>
+      <p>Арабидопсис – именно так называется растение, которое дало плоды в космосе.</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <p>Сайт создан студентом ИКБО-02-20 Чумиковым Дмитрием.</p>
+    </div>
+    <div>
+      <span class="title">Тварь ли я дрожащаяя или право имею?</span><br>
+    </div>
+  </div>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
